@@ -1,13 +1,15 @@
 #pragma once
 
-namespace sf { class Event; }
+class Hero;
 
 class IState
 {
 public:
-	virtual void update() = 0;
-	virtual void handleInput(const sf::Event& event) = 0;
-	virtual void setTexture() = 0;
+	virtual ~IState() = default;
+	virtual void handleInput(Hero& hero) = 0;
+	virtual void update(Hero& hero, float deltaTime) = 0;
+	virtual void setTexture(Hero& hero) = 0;
+	virtual bool isTemporaryState() const;
 };
 
 class Idle : public IState

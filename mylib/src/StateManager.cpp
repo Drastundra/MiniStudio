@@ -1,6 +1,12 @@
 #include <SFML/Graphics.hpp>
 
 #include "StateManager.h"
+#include "hero.h"
+
+//bool IState::m_dashAvailable = true;
+//sf::Clock IState::m_dashCooldownClock;
+//const float IState::m_dashCooldownDuration = 2.0f;
+//bool IState::m_mouseLeftPressed = false;
 
 void Idle::isDoingNothing(const sf::Event& event)
 {
