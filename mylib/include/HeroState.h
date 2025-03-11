@@ -24,5 +24,8 @@ public:
 	void popState(Hero* hero);
 
 private:
-	IState m_currentState;
+	std::map<StateEnum, std::shared_ptr<IState>> m_states;
+    std::shared_ptr<IState> m_currentState;
+    std::stack<std::pair<StateEnum, std::shared_ptr<IState>>> m_stateStack;
+    StateEnum m_currentStateName;
 };

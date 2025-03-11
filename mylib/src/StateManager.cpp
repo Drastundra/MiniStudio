@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "StateManager.h"
-#include "hero.h"
+#include "Hero.h"
 
 //bool IState::m_dashAvailable = true;
 //sf::Clock IState::m_dashCooldownClock;
