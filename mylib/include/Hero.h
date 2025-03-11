@@ -29,6 +29,7 @@ public:
 	int getHp() override;
 	void getStat() override;
 
+
 private:
 	int m_health;
 	int m_armor;
